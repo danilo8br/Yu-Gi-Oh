@@ -9,8 +9,14 @@
 
 
 
-
 #### Módulos
+
+Os primeiros códigos a seguir fazem importação de duas bibliotecas
+
+'''
+python
+import pandas as pd
+'''
 
 
 
