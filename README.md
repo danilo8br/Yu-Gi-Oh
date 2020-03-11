@@ -18,7 +18,6 @@ Este módulo tem a função de trazer ferramentas para analise de dados.
 </details>
 
 ```
-python
 import pandas as pd
 ```
 <details><summary>Gráficos</summary>
@@ -26,7 +25,6 @@ Este módulo serve para fazer exibição de gráficos conforme as estatísticas 
 </details>
 
 ```
-python
 import matplotlib.pyplot as plt
 ```
 
@@ -37,7 +35,6 @@ Aqui está criando uma variável, em seguida faz a leitura do arquivo.
 </details>
 
 ```
-python
 df = pd.read_csv('card_data.csv')
 ```
 
