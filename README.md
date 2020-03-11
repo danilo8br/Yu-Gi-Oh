@@ -13,11 +13,13 @@
 
 Os primeiros códigos a seguir fazem importação de duas bibliotecas
 
+
+</details>
 ```
 python
 import pandas as pd
 ```
-
+<\details>
 
 
 
