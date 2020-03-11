@@ -32,7 +32,7 @@ import matplotlib.pyplot as plt
 
 #### Leitura
 
-<details><summary>Leitura de arquivos</summary
+<details><summary>Leitura de arquivos</summary>
 Aqui está criando uma variável, em seguida faz a leitura do arquivo.
 </details>
 
