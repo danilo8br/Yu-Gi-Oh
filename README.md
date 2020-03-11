@@ -75,7 +75,7 @@ df.sort_values('Total', ascending=False).iloc[0:10]
 ```
 
 <details><summary>Elemento Escuridão</summary>
-Essas são as 10 cartas mais fortes do elemento Escuridão
+Essas são as 10 cartas mais fortes do elemento Escuridão.
 </details>
 
 ```
@@ -83,16 +83,111 @@ df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'DARK')].iloc[0
 ```
 
 <details><summary>Elemento Luz</summary>
-Essas são as 10 cartas mais fortes de elemento Luz
+Essas são as 10 cartas mais fortes de elemento Luz.
 </details>
 
 ```
 df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'LIGHT')].iloc[0:10]
 ```
 
+<details><summary>Elemento Divino</summary>
+Essas são as 10 cartas mais fortes do elemento Divinas.
+</details>
+
+```
+df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'DIVINE')].iloc[0:10]
+```
+
+<details><summary>Elemento Terra</summary>
+Essas são as 10 cartas de mais fortes de elemento Terra.
+</details>
+
+```
+df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'EARTH')].iloc[0:10]
+```
+
+<details><summary>Elemento Fogo</summary>
+Essas são as 10 cartas mais fortes do elemento Fogo.
+</details>
+
+```
+df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'FIRE')].iloc[0:10]
+```
+
+<details><summary>Elemento Água</summary>
+Essas são as 10 cartas mais fortes de elemento Água.
+</details>
+
+```
+df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'WATER')].iloc[0:10]
+```
+
+<details><summary>Elemento Vento</summary>
+Essas são as 10 cartas mais fortes de elemento Vento.
+</details>
+
+```
+df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'WIND')].iloc[0:10]
+```
 
 
+#### Contando as cartas
 
+<details><summary>Contando os Elementos</summary>
+Contando quantas cartas existem de todos os elementos.
+</details>
+
+```
+df.groupby(['Attribute']).count()
+```
+
+<details><summary>Calculando o total de cartas por elemento</summary>
+Calculando quantas cartas de todos elementos.
+</details>
+
+```
+dark = df[df['Attribute'] == 'DARK'].shape[0]
+light = df[df['Attribute'] == 'LIGHT'].shape[0]
+divine = df[df['Attribute'] == 'DIVINE'].shape[0]
+earth = df[df['Attribute'] == 'EARTH'].shape[0]
+fire = df[df['Attribute'] == 'FIRE'].shape[0]
+water = df[df['Attribute'] == 'WATER'].shape[0]
+wind = df[df['Attribute'] == 'WIND'].shape[0]
+```
+
+#### Utilizando os Gráficos
+
+<details><summary>Variáveis Y</summary>
+As variáveis armazenando os totais de cartas para acrescentar na parte Y do gráfico.
+</details>
+
+```
+atributos = [dark, light, divine, earth, fire, water, wind]
+```
+
+<details><summary>Variáveis X</summary>
+Os nomes de cada elemento para acrescentar na parte X do gráfco.
+</details>
+
+```
+elementos = ['DARK', 'LIGHT', 'DIVINE', 'EARTH', 'FIRE', 'WATER', 'WIND']
+```
+
+<details><summary>Gráfico de Barras</summary>
+Aqui está o titulo do gráfico e os eixos.
+</details>
+
+```
+# Titulo
+plt.title('Total de Elementos por Cartas')
+
+#Eixos
+plt.xlabel('Elements')
+plt.ylabel('Index')
+
+plt.bar(elementos, atributos)
+plt.show()
+```
 
 
 ## Enjoy :)!
