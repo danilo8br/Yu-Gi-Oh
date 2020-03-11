@@ -131,7 +131,7 @@ df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'WIND')].iloc[0
 ```
 
 
-#### Contando as cartas
+#### Contador
 
 <details><summary>Contando os Elementos</summary>
 Contando quantas cartas existem de todos os elementos.
