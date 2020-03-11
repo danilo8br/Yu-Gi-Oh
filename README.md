@@ -6,3 +6,5 @@
 - Utilizei um Dataset do site Kiggle do anime Yu-Gi-Oh, no Dataset vem todas as cartas do anime contendo o nome da carta, tipo, level, tipo efeito, elementos, ataque, defesa e o total que é a tabela que eu criei que está somando ataque mais a defesa de todas as cartas.
 
 - Comecei pegando as dez cartas mais fortes dos dados e em seguida fui pegando as dez cartas mais fortes de cada elemento, e para finalizar somei o total de cartas de cada elemento e mostrei em gráficos a quantidade.
+
+## Enjoy!
