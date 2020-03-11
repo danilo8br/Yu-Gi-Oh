@@ -40,15 +40,21 @@ df = pd.read_csv('card_data.csv')
 
 #### Colunas
 
-<details><summary>Pritando colunas</summary>
-Aqui está printando as colunas do arquivo.
+<details><summary>Colunas do arquivo</summary>
+Aqui mostra toda as colunas que contém no arquivo.
 </details>
 
 ```
 print(df.columns)
 ```
 
+<details><summary>Colunas e os dados</summary>
+ Aqui mostra uma lista dentro de outra chamando cada coluna do arquivo para mostrar seus dados.
+</details>
 
+```
+df[['Name', 'Type', 'Level', 'Race', 'Attribute', 'ATK', 'DEF']]
+```
 
 
 
