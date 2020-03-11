@@ -7,4 +7,4 @@
 
 - Comecei pegando as dez cartas mais fortes dos dados e em seguida fui pegando as dez cartas mais fortes de cada elemento, e para finalizar somei o total de cartas de cada elemento e mostrei em gráficos a quantidade.
 
-## Enjoy!
+## Enjoy :)!
