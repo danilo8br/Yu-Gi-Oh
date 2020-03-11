@@ -13,15 +13,15 @@
 
 Os primeiros códigos a seguir fazem importação de duas bibliotecas
 
-<details><summary>Importações</summary>
-Este módulo tem a função de trazer ferramentas para analise de dados para.
+<details><summary>Pandas</summary>
+Este módulo tem a função de trazer ferramentas para analise de dados.
 </details>
 
 ```
 python
 import pandas as pd
 ```
-
+<details><summary>Gráficos</summary>
 
 
 
