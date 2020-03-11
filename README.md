@@ -13,8 +13,10 @@
 
 Os primeiros códigos a seguir fazem importação de duas bibliotecas
 
-
+<details><summary>Importações</summary>
+Este módulo tem a função de fazer analise de dados através de dados de arquivos ou outros métodos.
 </details>
+
 ```
 python
 import pandas as pd
