@@ -56,7 +56,13 @@ print(df.columns)
 df[['Name', 'Type', 'Level', 'Race', 'Attribute', 'ATK', 'DEF']]
 ```
 
+<details><summary>Nova coluna</summary>
+Criando uma coluna que esta recebendo o ataque mais a defesa para cada carta
+</details>
 
+```
+df['Total'] = df['ATK'] + df['DEF']
+```
 
 
 
