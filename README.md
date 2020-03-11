@@ -36,6 +36,11 @@ import matplotlib.pyplot as plt
 Aqui está criando uma variável, em seguida faz a leitura do arquivo.
 </details>
 
+```
+python
+df = pd.read_csv('card_data.csv')
+```
+
 #### Colunas
 
 <details><summary>Pritando colunas</summary>
