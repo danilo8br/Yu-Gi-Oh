@@ -30,7 +30,10 @@ python
 import matplotlib.pyplot as plt
 ```
 
+<details><summary>Colunas</summary>
 Aqui está printando as colunas do arquivo.
+</details>
+
 ```
 print(df.columns)
 ```
