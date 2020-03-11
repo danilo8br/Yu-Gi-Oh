@@ -57,15 +57,22 @@ df[['Name', 'Type', 'Level', 'Race', 'Attribute', 'ATK', 'DEF']]
 ```
 
 <details><summary>Nova coluna</summary>
-Criando uma coluna que esta recebendo o ataque mais a defesa para cada carta
+Criando uma coluna que esta recebendo o ataque mais a defesa para cada carta.
 </details>
 
 ```
 df['Total'] = df['ATK'] + df['DEF']
 ```
 
+#### Ordenando valores
 
+<details><summary>As cartas mais fortes</summary>
+Ordenando os valores do maior pro menor e pegando as 10 cartas mais fortes do arquivo.
+</details>
 
+```
+df.sort_values('Total', ascending=False).iloc[0:10]
+```
 
 
 
