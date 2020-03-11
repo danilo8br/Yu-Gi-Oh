@@ -25,7 +25,10 @@ import pandas as pd
 Este módulo serve para fazer exibição de gráficos conforme as estatísticas dos seus dados.
 </details>
 
-
+```
+python
+import matplotlib.pyplot as plt
+```
 
 
 
