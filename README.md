@@ -74,6 +74,21 @@ Ordenando os valores do maior pro menor e pegando as 10 cartas mais fortes do ar
 df.sort_values('Total', ascending=False).iloc[0:10]
 ```
 
+<details><summary>Elemento Escuridão</summary>
+Essas são as 10 cartas mais fortes do elemento Escuridão
+</details>
+
+```
+df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'DARK')].iloc[0:10]
+```
+
+<details><summary>Elemento Luz</summary>
+Essas são as 10 cartas mais fortes de elemento Luz
+</details>
+
+```
+df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'LIGHT')].iloc[0:10]
+```
 
 
 
