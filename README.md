@@ -22,7 +22,8 @@ python
 import pandas as pd
 ```
 <details><summary>Gráficos</summary>
-
+Este módulo serve para fazer exibição de gráficos conforme as estatísticas dos seus dados.
+</details>
 
 
 
