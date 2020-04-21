@@ -1,129 +1,130 @@
 # Yu-Gi-Oh
-- Análise de dados das cartas do anime Yu-Gi-Oh utilizando Python e a biblioteca Pandas
+- Data analysis of Yu-Gi-Oh anime cards using Python and the Pandas library
 
 ![yugioh](https://user-images.githubusercontent.com/51414398/76413026-709dcc80-6373-11ea-851a-83b4d50b0194.jpg)
 
-- Utilizei um Dataset do site Kiggle do anime Yu-Gi-Oh, no Dataset vem todas as cartas do anime contendo o nome da carta, tipo, level, tipo efeito, elementos, ataque, defesa e o total que é a tabela que eu criei que está somando ataque mais a defesa de todas as cartas.
+- I used a Dataset from the Kiggle website of the Yu-Gi-Oh anime, in the Dataset comes all the anime cards containing the name of the card, type, level, effect type, elements, attack, defense and the total that is the table I created which is adding attack plus the defense of all cards.
 
-- Comecei pegando as dez cartas mais fortes dos dados e em seguida fui pegando as dez cartas mais fortes de cada elemento, e para finalizar somei o total de cartas de cada elemento e mostrei em gráficos a quantidade.<h1>
+- I started by taking the ten strongest cards from the dice and then I took the ten strongest cards from each element, and finally I added up the total number of cards for each element and showed in graphs the amount. <h1>
 
 
 
-#### Módulos
+#### Modules
 
-Os primeiros códigos a seguir fazem importação de duas bibliotecas
+The first codes below import two libraries
 
 <details><summary>Pandas</summary>
-Este módulo tem a função de trazer ferramentas para analise de dados.
+This module has the function of bringing tools for data analysis.
 </details>
 
 ```
 import pandas as pd
 ```
-<details><summary>Gráficos</summary>
-Este módulo serve para fazer exibição de gráficos conforme as estatísticas dos seus dados.
+<details><summary>Graphics</summary>
+This module is used to display graphs according to the statistics of your data.
 </details>
 
 ```
 import matplotlib.pyplot as plt
 ```
 
-#### Leitura
+#### Reading
 
-<details><summary>Leitura de arquivos</summary>
-Aqui está criando uma variável, em seguida faz a leitura do arquivo.
+<details><summary>Reading files</summary>
+Here you are creating a variable, then read the file.
 </details>
 
 ```
 df = pd.read_csv('card_data.csv')
 ```
 
-#### Colunas
+#### Colums
 
-<details><summary>Colunas do arquivo</summary>
-Aqui mostra toda as colunas que contém no arquivo.
+<details><summary>File columns</summary>
+Here it shows all the columns it contains in the file.
 </details>
 
 ```
 print(df.columns)
 ```
 
-<details><summary>Colunas e os dados</summary>
- Aqui mostra uma lista dentro de outra chamando cada coluna do arquivo para mostrar seus dados.
+<details><summary>Columns and data</summary>
+ Here it shows a list within another one calling each column of the file to show its data.
 </details>
 
 ```
 df[['Name', 'Type', 'Level', 'Race', 'Attribute', 'ATK', 'DEF']]
 ```
 
-<details><summary>Nova coluna</summary>
-Criando uma coluna que esta recebendo o ataque mais a defesa para cada carta.
+<details><summary>New colum</summary>
+ Creating a column that is receiving the attack plus the defense for each card.
 </details>
 
 ```
 df['Total'] = df['ATK'] + df['DEF']
 ```
 
-#### Ordenando valores
+#### Sorting values
 
-<details><summary>As cartas mais fortes</summary>
-Ordenando os valores do maior pro menor e pegando as 10 cartas mais fortes do arquivo.
+<details><summary>The strongest cards</summary>
+Sorting the values from the highest to the lowest and taking the 10 strongest cards from the file.
 </details>
 
 ```
 df.sort_values('Total', ascending=False).iloc[0:10]
 ```
 
-<details><summary>Elemento Escuridão</summary>
-Essas são as 10 cartas mais fortes do elemento Escuridão.
+<details><summary>Darkness Element</summary>
+These are the 10 strongest cards of the Darkness elements
+
 </details>
 
 ```
 df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'DARK')].iloc[0:10]
 ```
 
-<details><summary>Elemento Luz</summary>
-Essas são as 10 cartas mais fortes de elemento Luz.
+<details><summary>Light Element</summary>
+These are the 10 strongest Light element cards.
 </details>
 
 ```
 df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'LIGHT')].iloc[0:10]
 ```
 
-<details><summary>Elemento Divino</summary>
-Essas são as 10 cartas mais fortes do elemento Divinas.
+<details><summary>Divine Element</summary>
+ These are the 10 strongest cards in the Divine element.
 </details>
 
 ```
 df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'DIVINE')].iloc[0:10]
 ```
 
-<details><summary>Elemento Terra</summary>
-Essas são as 10 cartas de mais fortes de elemento Terra.
+<details><summary>Element earth</summary>
+ These are the 10 strongest Earth cards.
 </details>
 
 ```
 df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'EARTH')].iloc[0:10]
 ```
 
-<details><summary>Elemento Fogo</summary>
-Essas são as 10 cartas mais fortes do elemento Fogo.
+<details><summary>Fire element</summary>
+These are the 10 strongest cards in the Fire element.
 </details>
 
 ```
 df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'FIRE')].iloc[0:10]
 ```
 
-<details><summary>Elemento Água</summary>
-Essas são as 10 cartas mais fortes de elemento Água.
+<details><summary>Water element</summary>
+These are the 10 strongest Water element cards.
 </details>
 
 ```
 df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'WATER')].iloc[0:10]
 ```
 
-<details><summary>Elemento Vento</summary>
-Essas são as 10 cartas mais fortes de elemento Vento.
+<details><summary>Wind element</summary>
+These are the 10 strongest Wind element cards.
 </details>
 
 ```
@@ -131,18 +132,18 @@ df.sort_values('Total', ascending=False).loc[(df['Attribute'] == 'WIND')].iloc[0
 ```
 
 
-#### Contador
+#### Counter
 
-<details><summary>Contando os Elementos</summary>
-Contando quantas cartas existem de todos os elementos.
+<details><summary>Counting the Elements</summary>
+Counting how many letters there are of all the elements.
 </details>
 
 ```
 df.groupby(['Attribute']).count()
 ```
 
-<details><summary>Calculando o total de cartas por elemento</summary>
-Calculando quantas cartas de todos elementos.
+<details><summary>Calculating total cards per element</summary>
+Calculating how many cards of all elements.
 </details>
 
 ```
@@ -155,33 +156,33 @@ water = df[df['Attribute'] == 'WATER'].shape[0]
 wind = df[df['Attribute'] == 'WIND'].shape[0]
 ```
 
-#### Utilizando os Gráficos
+#### Using the Graphics
 
-<details><summary>Variáveis Y</summary>
-As variáveis armazenando os totais de cartas para acrescentar na parte Y do gráfico.
+<details><summary>Y variables</summary>
+The variables storing the card totals to add to the Y part of the graph.
 </details>
 
 ```
 atributos = [dark, light, divine, earth, fire, water, wind]
 ```
 
-<details><summary>Variáveis X</summary>
-Os nomes de cada elemento para acrescentar na parte X do gráfco.
+<details><summary>X Variables </summary>
+The names of each element to be added in part X of the graph.
 </details>
 
 ```
 elementos = ['DARK', 'LIGHT', 'DIVINE', 'EARTH', 'FIRE', 'WATER', 'WIND']
 ```
 
-<details><summary>Gráfico de Barras</summary>
-Aqui está o titulo do gráfico e os eixos.
+<details><summary>Bar Chart</summary>
+Here is the title of the graph and the axes.
 </details>
 
 ```
-# Titulo
+# Title
 plt.title('Total de Elementos por Cartas')
 
-#Eixos
+#Axles
 plt.xlabel('Elements')
 plt.ylabel('Index')
 
